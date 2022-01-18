@@ -1,0 +1,16 @@
+input{
+    width: 100%;
+    padding: 12px,20px;
+    margin: 8px 0;
+    box-sizing: content-box;
+    border: 2px solid gainsboro;
+    background-color: rgba(246, 243, 247, 0.836);
+
+
+}
+select{
+    width: 100%;
+    padding: 12px,20px;
+    border: 2px solid gainsboro;
+    background-color: #f1f1f1;
+}

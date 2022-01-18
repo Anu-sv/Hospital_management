@@ -1,0 +1,30 @@
+<div class="container">
+<h3>Enter Patient Details</h3>
+</div>
+<div class="container-md">
+<form (ngSubmit)="onSubmit()">
+    <div class ="form-group">
+    <label >Name</label>
+    <input type="text" class="form-control" id="name" 
+    [(ngModel)]= "patients.name" name="name">
+    </div>
+   
+    <div>
+        <label >VisitedDoctor</label>
+        <select name="visitedDoctor" [(ngModel)]= "patients.visitedDoctor" >
+            <option *ngFor = "let doct of doctors" [ngValue]= "doct.name">{{doct.name}}
+                </option>
+        </select>
+    </div>
+    <div class ="form-group">
+        <label >Date of Visit</label>
+        <input type="text" class="form-control" id="dateOfVisit" 
+        [(ngModel)]= "patients.dateOfVisit" name="dateOfVisit">
+    </div>
+   
+    <button class="btn btn-success" type="submit">Submit</button>
+
+    
+
+</form>
+</div>

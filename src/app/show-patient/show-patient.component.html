@@ -1,0 +1,41 @@
+<div class="text-striped">
+    <h3>Patient Details</h3>
+    </div>
+<div class="navbar navbar-light bg-light">
+    <form class="form-inline">
+ 
+  <input class="form-control mr-ms-2" type="number" name="id" [(ngModel)]="id" placeholder="enter patient Id"/>
+  <input class="btn btn-outline-success" type="button" (click)="method(id)" value="Find" />    
+  
+</form>
+</div>
+<div *ngIf="errorMessage">
+    <h3>{{errorMessage}}</h3>
+
+</div>
+
+<div>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+              
+              <th scope="col">Name</th>
+              <th scope="col">VisitedDoctor</th>
+              <th scope="col">Date of Visit</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              
+              <td>{{patients.name}}</td>
+              <td>{{patients.visitedDoctor}}</td>
+              <td>{{patients.dateOfVisit}}</td>
+
+            </tr>
+            
+          </tbody>
+
+       
+    </table>
+</div>

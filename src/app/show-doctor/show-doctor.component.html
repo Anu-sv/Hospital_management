@@ -1,0 +1,37 @@
+<div class="text-striped">
+    <h3>Doctors Details</h3>
+    </div>
+
+<div class="form-control">
+    <label style="font-size: 20px;">Select Doctor</label>
+    <select name="name" [(ngModel)]= "doct" >
+        <option  *ngFor = "let doct of doctors" [ngValue]= "doct">{{doct.name}}
+            </option>
+    </select>
+</div>
+
+<div>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+              
+              <th scope="col">Name</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Age</th>
+              <th scope="col">Specialist Field</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              
+              <td>{{doct.name}}</td>
+              <td>{{doct.gender}}</td>
+              <td>{{doct.age}}</td>
+              <td>{{doct.specialistField}}</td>
+            </tr>
+            
+          </tbody>
+
+       
+    </table>
+</div>
